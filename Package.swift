@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "RealReachability",
             path: "RealReachability",
-            publicHeadersPath: ".",
+            publicHeadersPath: "include/RealReachability",
             cSettings: [
                 .headerSearchPath("Connection"),
                 .headerSearchPath("FSM"),

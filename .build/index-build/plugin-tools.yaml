@@ -1,0 +1,22 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "RealReachability-arm64-apple-macosx15.0-debug.module": ["<RealReachability-arm64-apple-macosx15.0-debug.module>"]
+  "main": []
+  "test": []
+default: "main"
+nodes:
+  "/Users/bolivarbryan/Developer/RealReachability/RealReachability/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/bolivarbryan/Developer/RealReachability/RealReachability/","/Users/bolivarbryan/Developer/RealReachability/Package.swift","/Users/bolivarbryan/Developer/RealReachability/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
